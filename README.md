@@ -27,7 +27,7 @@
 | 9-10 | Introduction to motor control | - DC motors with encoders <br> - Quadrature encoder basics <br> - Motor driver ICs (L298N/TB6612FNG) | Motor + encoder test with STM32 PWM + capture | Report: encoder readings with motor control |
 | 11-12 | Data acquisition from IMU | - Kalman filter vs Complementary filter <br> - Fusion of accelerometer + gyroscope | Implement complementary filter for angle estimation | Plot real-time robot tilt angle |
 | 13-14 | Basic closed-loop control concepts | - Review: PID control <br> - Step response analysis | Control 1D inverted pendulum simulation in MATLAB/Python | PID simulation results |
-| 15 | Semester wrap | - System integration checkpoint | Demonstrate sensor + motor loop closed testing | Milestone: PCB functioning + IMU angle + motor encoder demo |
+| 15 | - Semester wrap <br> - สอบโปรเจค 1  | - System integration checkpoint | Demonstrate sensor + motor loop closed testing | Milestone: PCB functioning + IMU angle + motor encoder demo |
 
 ---
 
