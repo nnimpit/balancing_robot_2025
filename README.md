@@ -1,59 +1,60 @@
-# Senior Project Teaching Plan: Self-Balancing Robot (2 Semesters)
+# Self-Balancing Robot Senior Project Teaching Plan
+# 📌 Senior Project 1
+# 📌 บรรยายรายวิชา
+รายวิชานี้มุ่งเน้นการพัฒนาทักษะทางวิศวกรรมไฟฟ้าและระบบควบคุม ผ่านการออกแบบและพัฒนาหุุ่นยนค์ทรงตัว (Self Balancing Robot) นักศึกษาจะได้เรียนรู้ตั้งแต่ การออกแบบ PCB, การประกอบอุปกรณ์, การเขียนโปรแกรมควบคุมด้วย STM32F103C8 และ Arduino IDE, การสื่อสารระหว่างอุปกรณ์, ไปจนถึงการทดสอบหุุ่นยนค์ทรงตัว
 
-## Goal
-Students will design and implement a self-balancing two-wheeled robot using **STM32F103** microcontroller. The project involves embedded systems, control theory (PID & LQR), real-time operating systems, electronics design, and communication modules.
+โดยเนื้อหาของรายวิชาจะช่วยให้นักศึกษาสามารถ อธิบายความรู้เกี่ยวข้องกับการจัดการพลังงานของอุปกรณ์ (CLO1) เลือกใช้เทคโนโลยีที่เหมาะสม (CLO2), แก้ไขปัญหาที่เกิดขึ้นระหว่างพัฒนา (CLO3) และสร้างโครงการต้นแบบที่สามารถทำงานได้จริง
 
----
-
-## Semester 1: Fundamentals, Hardware Design, and Prototyping
-
-| Week | Objectives | Topics | Labs/Activities | Deliverables |
-|------|------------|--------|-----------------|--------------|
-| 1 | Project overview | Introduction to self-balancing robot concept, requirements, timeline | Brainstorming, literature review | Project proposal |
-| 2 | MCU fundamentals | STM32F103 architecture & development tools | Set up STM32 development environment (Keil/STM32CubeIDE) | Blink LED demo |
-| 3 | Serial interfaces | UART/I2C/SPI basics for sensor interfacing | Connect IMU (MPU6050 via I2C) to STM32 | Sensor data read test |
-| 4 | Sensors & filtering | IMU data, accelerometer, gyroscope, Kalman/Complementary filter concept | Acquire raw IMU data, implement simple filtering | IMU data plot |
-| 5 | Motor interfacing | DC motor fundamentals, encoder basics, PWM generation | Drive DC motors with STM32 PWM, read encoder counts | Motor position control demo |
-| 6 | PCB design basics | Introduction to PCB CAD (Altium/KiCAD), reference design for STM32F103 | Schematic capture practice | Draft schematic |
-| 7 | Power electronics | Motor driver circuits (L298N, BTS7960, etc.), power regulation for MCU and motors | Breadboard DC motor driver with STM32 control | Motor control test with load |
-| 8 | Embedded OS intro | FreeRTOS task scheduling, multitasking | Implement simple FreeRTOS LED blink & UART task | Basic FreeRTOS demo |
-| 9 | Control basics | System modeling of inverted pendulum, introduction to PID | MATLAB/Simulink simulation of robot dynamics | Simulation plots |
-| 10 | PCB design II | Design customized robot controller board with STM32F103, IMU, driver, comms | PCB layout exercise | Preliminary PCB layout |
-| 11 | Wireless communication | Introduction to RF modules (NRF24L01/HC-12/Bluetooth/LoRa) | Basic PC-to-MCU communication demo | Robot wireless link test |
-| 12 | SMD assembly | PCB fabrication and SMD soldering techniques | Assembling prototype board (reflow/hot air) | Partially assembled controller board |
-| 13 | Debugging hardware | Debugging interfaces (SWD/JTAG), logic analyzer/oscilloscope use | Test signals, check power rails, verify MCU boot | Working board test log |
-| 14 | Integration | Connect motors, sensors, and controller | Mount hardware on robot chassis | Hardware mock-up |
-| 15 | Mid-project review | Present hardware progress | Peer review and testing | Hardware integration report |
-| 16 | Semester wrap-up | Prepare documentation and reflect | Presentation | Semester 1 report |
+# 📌 เกณฑ์การให้คะแนน
+- การเข้าเรียน (20%)
+- การออกแบบ PCB (30%)
+- ผลการประกอบและทดสอบการทรงตัว (30%)
+- การนำเสนอ (20%)
+- 
+### Duration: 2 Semesters (30 weeks, ~1 year)
+### Target: From Scratch → Fully Functional Self-Balancing Robot with LQR control
 
 ---
 
-## Semester 2: Control, Optimization, and Advanced Features
+## Semester 1: Fundamentals, Hardware, and Basic Control
 
-| Week | Objectives | Topics | Labs/Activities | Deliverables |
-|------|------------|--------|-----------------|--------------|
-| 1 | Recap & targets | Overview of completed hardware | System initialization testing | Working hardware check |
-| 2 | Embedded drivers | Refine STM32 drivers for IMU, encoder, motor driver | Integrated sensor fusion (complementary filter/Kalman filter) | Sensor fusion output |
-| 3 | Real-time scheduling | Task separation in FreeRTOS for sensing, control, communication | Multi-task demo with IMU + motor control | FreeRTOS task mapping |
-| 4 | PID control implementation | Motor speed & angle control with PID | Tune PID on prototype | PID test data |
-| 5 | Stability testing | Robot standing test with PID | Robot balancing with support | Robot balancing demo (PID) |
-| 6 | LQR control theory | State-space modeling, linear quadratic regulator design | MATLAB pole-placement & LQR simulation | Simulation plots |
-| 7 | LQR implementation | Implement LQR in STM32 | Translate MATLAB gains to embedded C | LQR code |
-| 8 | LQR tuning | Compare PID vs LQR performance | Experimental testing | Stability performance graphs |
-| 9 | Wireless control | Integrate radio transmission for remote control | Control robot with PC or joystick | Remote control demo |
-| 10 | GPS integration | GPS fundamentals, parsing NMEA | GPS test logging | GPS data acquisition demo |
-| 11 | Pathway planning | Path-following algorithms for mobile robot | Basic waypoint navigation test | GPS navigation demo |
-| 12 | Safety & robustness | Fail-safe, emergency stop mechanisms | Power fault & error handling test | Safety checklist |
-| 13 | System optimization | Code optimization, memory management | Profiling MCU resources | Code optimization report |
-| 14 | Final integration | Combine all modules: balance, wireless, navigation | Final full system testing | System demo video |
-| 15 | Final project review | Formal presentation preparation | Mock defense session | Draft report |
-| 16 | Defense & submission | Final presentation & project submission | Project demonstration | Final report & robot demo |
+| Week | Objectives | Topics | Labs | Deliverables |
+|------|------------|--------|------|--------------|
+| 1-2 | Understand MCU basics and development environment | - Intro to STM32F103 architecture <br> - IDE setup (STM32CubeIDE) <br> - GPIO and basic peripherals | LED blink, button input | Lab report on STM32 basics |
+| 3-4 | Learn digital communication for sensors | - I²C, SPI, USART overview <br> - Sensor interfacing (IMU: MPU6050/MPU9250) | Connect IMU sensor via I²C, display raw data via serial | Demonstration of IMU output in serial console |
+| 5-6 | Design hardware/PCB suitable for robot controller | - Schematic capture (KiCad/Altium) <br> - PCB layout for STM32 + IMU + motor drivers | Group PCB design project | Gerber files + PCB schematic |
+| 7-8 | Explore SMD soldering and PCB assembly | - SMD parts, reflow basics <br> - PCB soldering lab | Assemble controller board using custom PCB | Functional PCB with STM32 + IMU tested |
+| 9-10 | Introduction to motor control | - DC motors with encoders <br> - Quadrature encoder basics <br> - Motor driver ICs (L298N/TB6612FNG) | Motor + encoder test with STM32 PWM + capture | Report: encoder readings with motor control |
+| 11-12 | Data acquisition from IMU | - Kalman filter vs Complementary filter <br> - Fusion of accelerometer + gyroscope | Implement complementary filter for angle estimation | Plot real-time robot tilt angle |
+| 13-14 | Basic closed-loop control concepts | - Review: PID control <br> - Step response analysis | Control 1D inverted pendulum simulation in MATLAB/Python | PID simulation results |
+| 15 | Semester wrap | - System integration checkpoint | Demonstrate sensor + motor loop closed testing | Milestone: PCB functioning + IMU angle + motor encoder demo |
 
 ---
 
-## End Results
-- Fully functional self-balancing robot controlled by STM32F103  
-- Custom PCB with IMU, motor driver, wireless comms, and power supply  
-- Implementation of **LQR control** for robust stabilizing  
-- Optional features: wireless control, GPS waypoint navigation  
-- Oral defense, report, and live demo
+## Semester 2: Advanced Control, FreeRTOS, Wireless, and LQR
+
+| Week | Objectives | Topics | Labs | Deliverables |
+|------|------------|--------|------|--------------|
+| 1-2 | Real-time OS for robot | - FreeRTOS tasks, scheduling, drivers | Implement FreeRTOS tasks for IMU + motor | Lab report: Multitasking robot system |
+| 3-4 | Onboard debugging | - UART debugging <br> - Real-time logging tools | Display PID variables via serial/RTT logging | Debug console working |
+| 5-6 | PID implementation and tuning | - Hands-on PID tuning <br> - Response curves | Tune robot balance with PID control | Robot balancing demo (PID) |
+| 7-8 | Advanced control system | - LQR overview <br> - State-space modeling <br> - MATLAB LQR design workflow | Simulate robot dynamics and LQR control in MATLAB | Report with state-space model + LQR gains |
+| 9-10 | Implement LQR on hardware | - STM32 implementation <br> - Comparison vs PID | Run LQR control loop on robot | Robot balance with LQR (demo video) |
+| 11-12 | Wireless communication | - Radio transmission modules (NRF24L01, Bluetooth) <br> - Remote control inputs | Implement wireless manual control | Wireless RC demo |
+| 13-14 | GPS and path following | - GPS basics (NEO-6M) <br> - Waypoint navigation | Integrate GPS to STM32 + log coordinates | Robot moves toward simple waypoint |
+| 15 | Final project integration | - Error checking, stability improvements <br> - Final presentation prep | Full system demo | Final demo: Self-balancing robot with LQR + wireless + GPS navigation |
+
+---
+
+## Final Deliverables
+- **Semester 1**:  
+  - Functioning STM32-based PCB  
+  - Sensor data acquisition (IMU + Encoder)  
+  - Angle estimation system  
+- **Semester 2**:  
+  - Robot balances on its own (PID → LQR)  
+  - Wireless manual control capability  
+  - GPS-guided navigation prototype  
+  - Final technical report + Demonstration  
+
+---
